@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+    <link rel="stylesheet" href="/JavaScript/DyanamicHTML/pagestyle.css">
+    <!-- Function  body of fact function-->
+    <script>
+        function fact(num)
+        {
+            fact=1;
+            for(i=1;i<=num;i++)
+            { 
+                fact*=i;
+               
+            console.log(fact+"*"+i+" "+fact);
+            } 
+            
+            document.getElementById("result").innerHTML="Fact of "+num+" is :"+fact ; alert("Do you want proceed further");
+        }
+    </script> 
+    
+</head>
+<body >  
+    
+    <form action="" method="post" >
+        <table border="4" >
+            <tr>
+                <td> Enter Number</td>
+                <td><input type="number" name="num" id=""></td>
+            </tr> 
+            <tr>
+                <td><input type="button" value="Factorial" onclick="fact(num.value)"></td>
+           
+
+            </tr>
+        </table> 
+ <div id="result"></div>
+
+    </form> 
+   
+</body> 
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+          var arr=[10,20,30,40,50];
+        document.write("<br/> Array :"+"["+ arr+"]");
+        document.write("<hr></hr>"); 
+
+        document.write("<br/>Sum  <br/>"); 
+        document.write("<hr></hr>"); 
+
+
+        document.write("<br/> Using function name <br/>"); 
+        function sumArray(a,b)
+        {
+            a=a+b;
+            return a;
+        }   
+       
+      var  sum=arr.reduce(sumArray);
+        document.write(" Sum  : "+sum);
+        document.write( "<hr></hr>"); 
+
+        document.write("<br/> Using Annonymous function  <br/>"); 
+        Annosum=arr.reduce(function (a,b){ return a+b;});
+        document.write("Sum :"+Annosum); 
+        document.write("<hr></hr>"); 
+
+        document.write("<br/> Using Arrow function  <br/>"); 
+        Arrowsum=arr.reduce((a,b)=>{return a+b});
+        document.write("Sum :"+Arrowsum); 
+        document.write("<hr></hr>");  
+
+        document.write("<br/>Avg  <br/>"); 
+        document.write("<hr></hr>");
+
+        document.write("<br/> Using  function Name  <br/>");
+        function calavg(a,b)
+        {
+            return a+b;
+        }
+        funAvg=arr.reduce(calavg)/arr.length; 
+        document.write("Avg :"+funAvg);
+        document.write("<hr></hr>");
+
+        document.write("<br/> Using Annonymous function  <br/>");
+        Annoavg=arr.reduce((a,b)=>{return a+b})/arr.length;
+        document.write("Avg :"+Annoavg);
+        document.write("<hr></hr>");
+
+        document.write("<br/> Using Arrow function  <br/>");
+        avg=arr.reduce((a,b,index)=> { return  a+b})/arr.length; 
+        document.write("Avg :"+avg); 
+        document.write("<hr></hr>"); 
+
+        document.write("<br/>Max  <br/>"); 
+        document.write("<hr></hr>"); 
+
+        document.write("<br/> Using Annonymous function  <br/>");
+        max=arr.reduce(function(a,b) {return a>b?a:b});
+        document.write("Max :"+max);
+        document.write("<hr></hr>"); 
+
+        document.write("<br/> Using Arrow function  <br/>");
+        arrowMax=arr.reduce((a,b)=>{return a>b?a:b}); 
+        document.write("<hr></hr>"); 
+
+
+        document.write("<br/>Min  <br/>"); 
+        document.write("<hr></hr>"); 
+
+        document.write("<br/> Using Annonymous function  <br/>");
+        annoMin=arr.reduce(function(a,b) {return a>b?b:a});
+        document.write("<br/> min :"+annoMin);
+        document.write("<hr></hr>"); 
+
+        document.write("<br/> Using Arrow function  <br/>");
+        arrowMin=arr.reduce((a,b)=>{return a>b?b:a}); 
+        document.write("<br/>min :"+arrowMin);
+        document.write("<hr></hr>");  
+
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

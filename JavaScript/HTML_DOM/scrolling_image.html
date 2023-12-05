@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling</title>
+    <script>
+        function startScroll() {
+            var myimg = document.getElementById("myimg");
+            var scroll = parseInt(myimg.style.left) + 20
+            if (scroll > window.innerWidth)
+
+                scroll = 100;
+            myimg.style.left = scroll + "px";
+            flag = setTimeout(function () { startScroll() }, 500);
+
+        }
+        function stopScroll() {
+            clearTimeout(flag);
+            var myimg = document.getElementById("myimg");
+            myimg.style.position = "absolute";
+            myimg.style.left = "100px";
+            myimg.style.top = "100px";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="/HTML/images/rohit.jpg" id="myimg" alt="rohit" height="100" width="100"
+        style="position:absolute;top:100px;left:100px" onclick="startScroll()" onmouseover="stopScroll()"/> 
+      
+</body>
+
+</html>

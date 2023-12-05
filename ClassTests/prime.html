@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script>
+        function prime()
+        {   
+            console.log("in function"); 
+           var str=" ";
+            str+="<ul>"; 
+               
+            for(i=10;i<100;i++)
+            {
+                flag=true;
+                for(j=2;j<=i/2;j++)
+                {   
+                    
+                    if(i%j==0)
+                    {  
+                      flag=false ;        
+                    } 
+                }
+                    if(flag==true) 
+                    {
+                        str+="<li>";
+                            str+=j;
+                        str+="</li>";
+                    }
+                }
+                str+="</ul>"; 
+                document.getElementById("result").innerHTML=str;
+            }  
+                      
+                        
+                    
+            
+                // console.log(res);
+               
+        
+    </script>
+</head>
+<body> 
+    
+    <input type="button" value="ShowPrime" onclick="prime()">
+    <div id="result"></div>
+</body>
+</html>

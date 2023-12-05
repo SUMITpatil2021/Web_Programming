@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visitor_info</title> 
+    <script>
+        function validatedata()
+        {
+            var email=document.visitor.mailid.value;
+            var emailpatter=/^[\w.$#_-]+@[a-z]{4,10}\.[a-z]{2,3}$/
+            if(!emailpatter.test(email))
+            {
+                document.getElementById("emailerror").innerHTML="Invalid Email ID";
+                document.visitor.mailid.value="";
+                document.visitor.mailid.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("emailerror").innerHTML="";
+            } 
+
+           
+
+            if(document.visitor.Occupation.value=="")
+            {
+                document.getElementById("nooccupation").innerHTML="please Enter occuption ";
+                return;
+            }
+            if(document.visitor.junkmail.value=="")
+            {
+                // document.getElementById("junkmailselect").innerHTML="please select one option " 
+                alert("plz confirm Want us to send junk email? ");
+                return;
+            } 
+            document.visitor.submit();
+        }
+    </script>
+</head>
+<body>
+    <h1>visitor_info Form </h1>
+    <table border="4">
+        <form action="" name="visitor"> 
+            <tr>
+            <th colspan="2">visitor information</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="emaildid">Email Address :</label>
+            </td>
+            <td>
+                <input type="email" name="mailid" id="emaildid"> 
+                <span id="emailerror" style="color: red;"></span>
+            </td>
+        </tr> 
+        <tr>
+            <td>Do you use web for : </td>
+            <td > <input type="checkbox" name="c1" id="Research"> Research
+                  <input type="checkbox" name="c1" id="Purchase">Purchase  
+             </td>
+         </tr>
+         <tr>
+            <td>Occupation :</td>
+            <td style="margin-left: 10px;"> <select name="Occupation" id="">
+                <option value=""></option>
+                <option value="o2">Student</option>
+                <option value="o3">Teacher</option>
+                <option value="o3">Civil servant</option>
+                <option value="o4">Scinetist</option>
+            </select> <span id="nooccupation" style="color: red;"></span></td> 
+        </tr> 
+        <tr>
+            <td> Want us to send junk email? </td>  
+            <td> <input type="radio" name="junkmail" id="y">Absolutely 
+                 <input type="radio" name="junkmail" id="n">No way man
+            </td> 
+        </tr>
+        <tr>
+            <td><input type="button" value="SUBMIT"  onclick="validatedata()" style="margin-left: 60%;"></td>
+            <td><input type="reset" value="RESET"></td>
+        </tr>
+  
+        
+        </form>
+    </table>
+</body>
+</html>

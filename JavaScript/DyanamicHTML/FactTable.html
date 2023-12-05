@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/JavaScript/DyanamicHTML/factTableStyle.css">
+    <title>Document</title> 
+    <script>
+        function factTable()
+        {
+            var str=" "; 
+            var num=5;
+            str+="<table border='1'>"
+                str+="<tr>";
+                    str+="<th>";
+                        str+="Number";
+                    str+="</th>";
+                    str+="<th>";
+                        str+="Factorial"
+                        str+="</th>"
+                    str+="</tr>";
+                for(i=1;i<=num;i++)
+                {
+                    str+="<tr>";
+                        str+="<td>";
+                            str+=i;
+                        str+="</td>";
+
+                        str+="<td>";
+                            var  fact=1;
+                            for(j=1;j<=i;j++)
+                            {
+                                
+                                fact*=j;
+                            } 
+                           str+=fact;
+                        str+="</td>";  
+                    str+="</tr>";
+                }
+                str+="</table>";
+                document.getElementById("res").innerHTML=str;
+
+        }
+    </script>
+</head>
+<body>
+    <form action="" style="padding:autpo; background-color: black;"> <input type="button" value="Factorial Table"  onclick="factTable()"> 
+         <div id="res" style="margin-left: 24%  ; margin-top:auto" ></div> </form> 
+    <br/>
+   
+</body>
+</html>

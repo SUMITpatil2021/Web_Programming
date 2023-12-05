@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var arr=["40","66","30","20","50"]; 
+       
+        document.write(arr);
+        document.write("<br/>");
+        document.write ("Using Sort function directly : "+arr.sort());
+        document.write( "<hr></hr>");
+        function sortedarray(a,b)
+        {
+            return a-b;
+        } 
+
+        document.write("Using FunctionName : "+arr.sort(sortedarray));
+        document.write( "<hr></hr>");
+
+
+        document.write("<br/ <br/> Using Annonymous Fucntion <br/>") ;
+        var sortarr=arr.sort(function(a,b){return a-b});
+        document.write("Using Annonymous Fucntion : "+sortarr);
+        document.write( "<hr></hr>");
+
+        document.write("<br> <br/> Using arrow Fucntion <br/>") ; 
+        var arrowarr=arr.sort((a,b)=>{return a-b})
+        document.write("Using Annonymous Fucntion : "+sortarr);
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>StopWatch</title>
+    <script>
+        function start()
+        {
+            hr=min=sec=0;
+            sec++;
+            if(sec==60)
+                {
+                    min++;
+                    sec=0;
+                }
+            if(min==60)
+                {
+                    hr++;
+                    min=0;   
+                }
+           sec="0"+parseInt(sec);
+           var str=hr+":"+min+":"+sec;
+           document.getElementById("stopwatch").innerHTML=str; 
+
+
+
+        }
+    </script>
+</head>
+<body> 
+    <div id="stopwatch" style="text-align: center;"> </div> <br/> <br/>
+    <button onclick="start()" onload="start()">Start</button>
+    <button>Pause</button>
+    <button>Stop</button>
+</body>
+</html>

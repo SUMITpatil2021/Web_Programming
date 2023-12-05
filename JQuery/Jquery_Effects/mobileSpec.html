@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/JQuery/jquery-ui.min.js"></script>
+    <script src="/JQuery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(){
+                $(this).next().slideDown(3000);
+            });
+
+            $("#close").click(function(){
+                $(this).parent().slideUp(3000);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li> Oneplus  <a href="#" >Specifications </a> 
+            <div id="specs" style="display: none;"> 
+               
+                 
+                     <ul> 
+                        <Span> Onelus </Span>
+                        <li>Handset Name :  Oneplus Nord 2T 5G </li>
+                        <li>RAM : 6GB/8GB</li>
+                        <li>Camera: 48MP back camera & 10MP rear camera </li>
+                        <li>Price: 27999/- </li> 
+                         <a href="#" id="close">Close  </a>    
+                    
+                
+                    </ul> 
+                    </div>
+        
+        
+        </li>
+        <li> Apple  <a href="#" >Specifications </a>
+           <div id="specs" style="display: none;">
+            
+            <ul>
+                <span>Apple </span>
+                <li>Handset Name: Apple 15 Pro </li>
+                <li>RAM: 8GB</li>
+                <li>Camera: 36 MP </li>
+                <li>Price:140000/-/-</li>
+                <a href="#" id="close">Close  </a>  
+            </ul> 
+            </div>
+        </li>
+        <li> Samsung <a href="#" >Specifications </a>  
+           
+           <div id="specs" style="display: none;">
+
+         
+            <ul>
+                <span> Samsung</span>
+                <li>Handset Name : Samasung S22 Ultra </li>
+                <li>RAM:8/12GB</li>
+                <li>Camera:108MP</li>
+                <li>Price:99999/-</li>
+                <a href="#" id="close">Close  </a>
+            </ul>
+           </div>
+        </li> 
+
+
+        <li> Vivo <a href="#" >Specifications </a>  
+            <div id="specs" style="display: none;">
+            
+            <ul>
+                <span> Vivo</span>
+                <li>Handset Name :Vivo X60 </li>
+                <li>RAM:8/12GB</li>
+                <li>Camera:48MP</li>
+                <li>Price:19999/-</li>
+                <a href="#" id="close">Close  </a>
+            </ul>
+        
+    </div>
+        </li>
+    </ul> 
+
+    
+           
+
+           
+
+       
+</body>
+</html>

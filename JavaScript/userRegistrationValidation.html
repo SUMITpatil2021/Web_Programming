@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Registration </title> 
+    
+    
+    <style>
+
+        
+.topnav{
+           background: green;
+           height: 100px;
+           width: 101%;
+           margin-left: -7px;
+           margin-top: -25px;
+           position:sticky;
+           top: 1;
+           z-index: 1;
+           background-image: linear-gradient(red, yellow);text-align: center;
+           float: left;
+           left:0;
+           
+        } 
+        .sidenav{
+            height: 100%;
+            width: 224px;
+            position: fixed;
+            z-index: 1;
+            top: 0%;
+            left: 0;
+            background-color: rgb(210, 30, 30);
+            /* overflow-x: hidden; */
+           
+        }
+ 
+        .rightnav{
+            height: 100%;
+            width: 224px;
+            position:fixed;
+            z-index: 1;
+            top:0%;
+            right:0;
+            background-color: rgb(210, 30, 30);
+            /* overflow-x: hidden; */
+        } 
+        
+        
+    </style> 
+    <script>
+        function validatedata()
+        { 
+            var lastname=document.bank.lname.value;
+            if(lastname=="")
+            {
+                document.getElementById("lnamearr").innerHTML="Plz  enter last name "
+                document.bank.lname.value="";
+                document.bank.lname.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("lnamearr").innerHTML=""; 
+            }
+
+            var firstname=document.bank.fname.value;
+            if(firstname=="")
+            {
+                document.getElementById("fnamearr").innerHTML="Plz  enter first name "
+                document.bank.fname.value="";
+                document.bank.fname.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("fnamearr").innerHTML=""; 
+            } 
+            var  uid=document.bank.uid.value;
+            if(uid=="")
+            {
+                document.getElementById("usererr").innerHTML="plz provide User ID ";
+                document.bank.uid.value="";
+                document.bank.uid.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("usererr").innerHTML=""; 
+            } 
+            var email=document.bank.mailid.value;
+            if(email=="")
+            {
+                document.getElementById("mailerr").innerHTML="plz provide Email ID ";
+                document.bank.mailid.value="";
+                document.bank.mailid.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("mailerr").innerHTML=""; 
+            }
+
+            var acno=document.bank.acno.value;
+            var pattern=/\d{10}/;
+            if(!pattern.test(acno))
+            {
+                document.getElementById("acnoerr").innerHTML="pleas enter 10 digit account number ";
+                document.bank.acno.value="";
+                document.bank.acno.focus();
+                return;
+            }
+            else
+            {
+                document.getElementById("acnoerr").innerHTML="";
+            } 
+            var crno=document.bank.crno.value;
+            var crnopattern=/\d{10}/;
+            if(!crnopattern.test(crno))
+            {
+                document.getElementById("crerr").innerHTML="Plz enter 10 digit number ";
+                document.bank.crno.value="";
+                document.bank.crno.focus();
+                return;
+                console.log();
+            }
+            else
+            {
+                document.getElementById("crerr").innerHTML="";
+            }
+            
+          var   pwd=document.bank.pwd.value;
+            var pwdpattern=/[a-z]@[0-9]{5,10}/;       <!--   password pattern - @202124 -->
+            if(!pwdpattern.test(pwd))
+            {
+                document.getElementById("pwderr").innerHTML="Invalid Password";
+                document.bank.pwd.value="";
+                document.bank.pwd.focus();
+                return;
+            }
+            else
+            {
+             document.getElementById("pwderr").innerHTML="";
+  
+            } 
+
+            var repwd=document.bank.pwdchk.value;
+            if(pwd!=repwd)
+            {
+                document.getElementById("rpwderr").innerHTML="Password dosent match plz reenter password ";
+                document.bank.pwdchk.value="";
+                document.bank.pwdchk.focus();
+                return;
+            } 
+            else
+            {
+                document.getElementById("rpwderr").innerHTML="";  
+            }
+            
+            document.bank.submit();
+        } 
+    </script>
+</head>
+<body> 
+
+    <div class="sidenav" >
+    </div> 
+    <div class="rightnav" >
+    </div> 
+    <div class="topnav"> 
+        <h1>    First Northen Bank </h1>  
+        <img src="/HTML/images/bank_logo.jpg" alt="logo" width="100" height="100"  style="transform: translate3d(-200px, -80px, 0px);"  > 
+       
+     </div> 
+
+     
+    <div style="margin-left: 15%" h>
+        <h1>New User Registration </h1> 
+        <p>In order to use FNB's All day Banking service, please complete the following details and then the <br>submit button to complete the Registration cycle.  </p> 
+    
+    <table>
+        <form action="" method="post" name="bank" >
+        <tr>
+            <td><label for="lastname">Last Name </label></td>
+            <td><input type="text"  name="lname" id="lastname" placeholder="Enter last name"> 
+            <span id="lnamearr" style="color: red;"></span>
+            </td>
+        </tr> 
+
+        <tr>
+            <td><label for="fistname">First Name </label></td>
+            <td><input type="text" name="fname" id="firstname" placeholder="Enter First Name ">
+            <span id="fnamearr" style="color: red;"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="id">Your Prefred user ID </label></td>
+            <td><input type="text" name="uid" id="id" placeholder="Enter user ID"> 
+            <span id="usererr" style="color: red;"></span></td>
+        </tr>
+
+        <tr>
+            <td><label for="emailid">Email Address</label></td>
+            <td><input type="email" name="mailid" id="emailid" placeholder="Enter email ID"> 
+            <span id="mailerr" style="color: red;"></span>
+            </td>
+        </tr> 
+
+        <tr>
+            <td><label for="accNo">Account Number</label></td>
+            <td><input type="number" name="acno" id="accNo" placeholder="Enter Account No."> 
+            <span id="acnoerr" style="color: red;"></span></td>
+        </tr> 
+
+        <tr>
+            <td><label for="crNo">Credit Card Number </label></td>
+            <td><input type="number" name="crno" id="crNo" placeholder="Enter Credit Card No.">
+            <span id="crerr" style="color: red;"></span>
+            </td>
+        </tr> 
+
+        <tr>
+            <td>Online Password</td>
+            <td><input type="password" name="pwd" id="ipwd" placeholder="Enter Password here "> 
+                <span id="pwderr" style="color: red;"></span>
+            </td>
+        </tr> 
+
+        <tr>
+            <td>Online Password(Repeted)</td>
+            <td><input type="password" name="pwdchk" id="ipwdchk" placeholder="Enter Password again">
+            <span id="rpwderr" style="color: red;"></span>
+            </td>
+        </tr> 
+
+        <tr>
+            <td><input type="button" value="Submit"  style="margin-left: 60%;" onclick="validatedata()"></td>
+            <td><input type="reset" name="Clear" id=""></td>
+        </tr>
+
+        </form>
+    </table>
+</div>
+
+
+</body>
+</html>

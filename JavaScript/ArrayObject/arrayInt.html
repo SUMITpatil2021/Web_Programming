@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script>
+    function insert()
+    {    
+        var arr=[];
+        for(i=0;i<=5;i++)
+        {
+        arr[i]=prompt("Enter Number ");
+        // alert("Number  is :"+num); 
+        }  
+        //using simple way 
+        // document.getElementById("arrayOfInteger").innerHTML="array is :"+arr+"<br/>";  
+         
+        //using simple for loop  
+
+
+        document.write("Using Simple For loop  <br/>"); 
+        document.write("<ol>")
+        for(j=0;j<arr.length;j++)
+        {  
+            document.write("<li>");
+            document.write(arr[j]);
+            document.write("</li>");
+        } 
+        document.write("</ol>") 
+
+
+
+        document.write("-----------------------------------<br/>");
+
+        document.write("Using  For Each loop  <br/>");
+
+        for(i in arr)
+        {
+            document.write(arr[i]+"<br/>");
+        }
+        document.write("-----------------------------------<br/>"); 
+
+        document.write("Using  Advanced for loop  <br/>");
+
+        for(element of arr)
+        {
+            document.write(element+"<br/>");
+        }
+document.write("-----------------------------------<br/>");
+  
+document.write("Search ");
+ no=prompt("Enter no to be searched ");
+ document.write(arr.indexOf(no));
+} 
+ </script>
+</head>
+<body>
+   <input type="button" value="Insert Data" onclick="insert()"> 
+   <div id="arrayOfInteger"></div>
+</body>
+</html>

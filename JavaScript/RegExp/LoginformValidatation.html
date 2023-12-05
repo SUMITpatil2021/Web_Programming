@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title> 
+    <script>
+        function formValidation()
+        {
+            var uname=document.loginform.uid.value;
+            var uidpattern=/^[A-Za-z.]{5,15}$/
+            if(!uidpattern.test(uname))
+            {
+                // alert("Invalid Username ");
+                document.getElementById("user").innerHTML="Invalid Username ";
+                document.loginform.uid.value = "";
+                document.loginform.uid.focus();
+                return;
+            }
+             else
+             {
+                document.getElementById("user").innerHTML="";
+
+             } 
+             var upwd=document.loginform.pwd.value;
+             var pwdpattern=/^[A-Z]{1}[a-z]{1,}@[0-9]{2}$/
+             if(!pwdpattern.test(upwd))
+             {
+                document.getElementById("pwderr").innerHTML="Invalid Password ";
+                document.loginform.pwd.value= "";
+                document.loginform.pwd.focus();
+                return;                
+             }
+             else
+             {
+              document.getElementById("pwderr").innerHTML=" " ; 
+             } 
+             document.loginform.submit();
+        }
+    </script>
+</head>
+<body> 
+    <table> 
+        
+    <form  name="loginform" id="loginform"> 
+        <tr>
+         <td> <label for="uidText"> Enter Uid:</label> </td>
+         <td> <input type="text" name="uid" id="uidText"> 
+         
+            <span id="user" style="color: red;"> </span>
+        </td><br> 
+        </tr>  
+ <br>  
+        <tr>
+        <td>   <label for="pwd">Enter Password</label> </td>        
+        <td>   <input type="password" name="pwd" id="pwd">
+        
+        </td> 
+        <td>   <span id="pwderr" style="color: red;"> </span></td> 
+        </tr>
+        <tr>
+        <td>   <input type="button" value="Login" onclick="formValidation()"> 
+          </td>  
+         
+    
+        <td>    <input type="reset" value="Clear"> </td>
+        </tr>
+    </form>  
+    </table>
+     
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalClock</title>
+    <script>
+        function disptime()
+        {
+            var mytime=new Date();
+            var dhr=mytime.getHours();
+            var dmn=mytime.getMinutes();
+            var dsec=mytime.getSeconds();
+            if(dhr<10)
+                dhr="0"+dhr;
+            if(dmn<10)
+                dmn="0"+dmn;
+            if(dsec<10)
+                dsec="0"+dsec;
+            var str=dhr+":"+dmn+":"+dsec;
+            document.getElementById("time").innerHTML=str;
+            setTimeout(function(){disptime()},1000);
+        }
+    </script>
+</head>
+<body onload=" disptime()"> 
+    <div id="time" style="float: right;">  <br> <hr/> </div>
+    <button></button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <script>
+        var str="welcome"; 
+
+var length=str.length;
+document.write("Length of String is :"+length); 
+document.write("<hr></hr> <br/>");
+
+document.write("all in upper case <br/>");
+document.write(str.toUpperCase());
+document.write("<hr></hr> <br/>");
+
+document.write("all in lower case <br/>");
+document.write(str.toLowerCase());
+document.write("<hr></hr> <br/>");
+
+document.write("Seacrh Specific character in string available <br/>");
+var check=prompt("Enter Character to check wheather present or not ");
+
+document.write(str.indexOf(check));
+
+document.write("<br/> Last Index :");
+document.write(str.lastIndexOf(check));
+      
+function strfun()
+{
+    var  newstr = document.getElementById("str").value; 
+    var length=newstr.length+"<br/>"
+         document.write(newstr.length+"<br/>"); 
+
+         document.getElementById().innerHTML=length;
+}
+
+
+    </script>
+</head>
+<body>
+    <form action="" method="post"> 
+        <label for="mystr"> Enter String</label>
+        <input type="text" name="str" id="mystr"  > </input> 
+        <button onclick="strfun()">Process</button>
+        
+    </form>  
+    <div id="res"></div>
+</body>
+</html>

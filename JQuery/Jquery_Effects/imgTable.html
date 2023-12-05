@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/JQuery/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("img").mouseup(function(){
+                $(this).fadeIn("slow");
+            })
+
+            $("img").mousedown(function(){
+                $(this).fadeOut("slow");
+            })
+        })
+    </script>
+</head>
+<body>
+    
+    <table border="4" style="border:solid; height: auto;">
+        <tr>
+            <td><img src="/JQuery/images/rohit.jpg" alt="" height:auto,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit1.jpg" alt="" height:auto,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit2.jpg" alt="" height:auto,  width:auto ></td>
+        </tr>
+        <tr>
+            <td><img src="/JQuery/images/rohit3.jpg" alt=""  height:auto,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit4.jpg" alt="" height:auto,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit.jpg" alt=""  height:auto,  width:auto ></td>
+        </tr>
+        <tr>
+            <td><img src="/JQuery/images/rohit1.jpg" alt="" height:auto ,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit2.jpg" alt="" height:auto ,  width:auto ></td>
+            <td><img src="/JQuery/images/rohit3.jpg" alt="" height:auto ,  width:auto ></td>
+        </tr>
+    </table>
+</body>
+</html>

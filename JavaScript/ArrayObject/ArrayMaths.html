@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var arr=[2,3,5,7];
+      document.write("<br/> Array :"+"["+ arr+"]");
+      document.write("<hr></hr>"); 
+   
+      document.write("<br/>Check For all Even <br/>"); 
+
+            document.write("<br/> Using Annonymous  Function  <br/>"); 
+            EvenCheck=arr.every(function(a){return a%2==0});
+            document.write(EvenCheck);
+document.write("<hr></hr>");  
+
+
+      document.write("<br/>Check For all odd <br/>"); 
+
+            document.write("<br/> Using Annonymous  Function  <br/>"); 
+            oddCheck=arr.every(function(a){return a%2!=0});
+            document.write(oddCheck);
+            document.write("<hr></hr>");  
+
+    document.write("<br/>Check For all Prime <br/>"); 
+
+            document.write("<br/> Using Annonymous  Function  <br/>"); 
+            primeCheck=arr.every(function(a){  
+                                            flag=true;
+                                             for(i=2;i<a;i++)
+                                            {
+                                                if(a%i==0)
+                                                {
+                                                    flag=false;   
+                                                }
+                                            }
+                                            if(flag==true && a!=1)
+                                            { return true;}
+                                            else
+                                            return false;
+                                            });
+            document.write(primeCheck);
+document.write("<hr></hr>");  
+      
+      
+            document.write("<br/>Even<br/>");  
+    //   document.write("<hr></hr>");
+                document.write("<br/> Using  Annonymous Function  <br/>"); 
+                var evenarr=arr.filter(function(a){return a%2==0});
+                document.write("Even Array : [ "+evenarr.toString()+"]");
+    document.write("<hr></hr>");
+
+    document.write("<br/>Odd <br/>"); 
+
+                document.write("<br/> Using Annonymous  Function  <br/>"); 
+                var oddarr=arr.filter(function(a){return a%2!=0});
+                document.write("Odd Array : [ "+oddarr.toString()+"]");
+    document.write("<hr></hr>"); 
+
+    
+
+
+
+
+      
+      
+
+
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

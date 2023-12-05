@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <script>
+        document.write("Display Wheather the number is prime or not<br/>")
+        function prime(num)
+        {
+            var flag=true;
+            for(i=2;i<=num/2;i++)
+            {
+                if(num%i==0)
+                    flag=false;
+    
+            } 
+            if(flag==true && num>=0)
+                document.writeln(num+" is Prime Number ") 
+            else
+                document.writeln(num+" is not a prime number ")  
+        
+        } 
+        // num=5; prime(num)
+    </script> 
+   
+</head>
+<body> 
+    <form action=""> 
+        Enter Number 
+        <input type="text" name="num"/> <br/>
+        <input type="button" value="calPrime" onclick="prime(num.value)"/>
+    </form>
+ <!-- Function call -->>
+    <!-- <script>  
+    
+     prime(num)</script> -->
+<!--  Function  body-->
+    <!-- <script>
+        document.write("Display Wheather the number is prime or not<br/>")
+        function prime(num)
+        {
+            var flag=true;
+            for(i=2;i<=num/2;i++)
+            {
+                if(num%i==0)
+                    flag=false;
+    
+            } 
+            if(flag==true && num>=0)
+                document.writeln(num+" is Prime Number ") 
+            else
+                document.writeln(num+" is not a prime number ")  
+        
+        } 
+        num=5; prime(num)
+    </script> 
+    -->
+  
+</body>
+</html>

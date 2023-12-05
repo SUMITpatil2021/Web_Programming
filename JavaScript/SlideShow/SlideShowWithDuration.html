@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Slide Show</title>
+    <script>
+        var imgArr=["rohit.jpg","rohit1.jpg","rohit2.jpg","rohit3.jpg","rohit4.jpg"];
+        var index=0;
+        function previousImg()
+        {
+            index--;
+            if(index==-1)
+                     index=imgArr.length-1;
+            document.getElementById("myimg").src=imgArr[index];
+            setTimeout(function(){previousImg()},1000);
+            
+        }
+
+        function nextImg()
+        {
+            index++;
+            if(index==imgArr.length)
+                index=0;
+            document.getElementById("myimg").src=imgArr[index];
+            setTimeout(function(){nextImg()},1000);
+        }
+    </script>
+</head>
+<body onload="nextImg()">
+    <img src="rohit.jpg" width="auto%" height="auto"
+    id="myimg" /> 
+</body>
+</html>

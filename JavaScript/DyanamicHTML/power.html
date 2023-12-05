@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="/JavaScript/DyanamicHTML/styleForpower.css"> 
+
+    <script>
+        function powerNo(base,exp)
+        {
+            res=0;
+            for(i=1;i<=exp;i++)
+            {
+                res=base*i;
+            } 
+            console.log(res);
+            document.getElementById("result").innerHTML=base+ "to the power "+exp+" is : "+res;
+        }
+    </script>
+</head>
+<body>
+   <form action="">
+    <table border="4">
+        <tr>
+            <td>Enter Base Number </td>
+            <td><input type="number" name="base" id=""/></td>
+        </tr>
+        <tr>
+            <td>Enter Exponant Number </td>
+            <td><input type="number" name="exp" id=""/></td>
+        </tr> 
+        <tr>
+            <td><input type="button" value="Power " onclick="powerNo(base.value,exp.value)"/></td>
+        </tr>
+    
+    </table> 
+    <div id="result"></div>
+   </form>
+</body>
+</html>

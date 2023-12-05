@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- password field  one button label sho password  after click password should be visible and after  hide  -->
+<script>
+    function chnagepass()
+    { 
+        var pwd=document.password.pawd;
+        if(pwd.type==="password")
+        {
+            pwd.type="text";
+            document.getElementById("pwdd").value="Hide Password ";
+           
+        }
+        else
+        {
+            pwd.type="password";
+            document.getElementById("pwdd").value="Show Password ";
+        }
+
+    } 
+</script>
+</head>
+<body>
+     <form action="" name="password"> enter password 
+        <input type="password" name="pawd" id="">
+     <input type="button" id="pwdd" value="Show Password " onclick="chnagepass()">
+     </form>
+</body>
+</html>

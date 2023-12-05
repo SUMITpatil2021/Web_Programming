@@ -1,0 +1,21 @@
+table
+{
+    text-align: center;
+     border-style: solid; 
+     height: auto;
+      width: auto;
+     margin-right: 100%; 
+     background-color: skyblue;
+     height: 100%;
+    
+     
+     /* margin-bottom: 100%; */
+} 
+form
+{
+    border-style: solid;
+    margin-right: 78%;
+   height: 100px; 
+   padding: 25px; 
+   text-align: center;
+}
