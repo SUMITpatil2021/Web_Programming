@@ -1,0 +1,3 @@
+var mym=require(./basicOperationsModule.js);
+console.log(mym.isPrime(5));
+console.log(mym.calFact(5));
