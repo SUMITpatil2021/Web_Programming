@@ -3,16 +3,29 @@
 <head>
     <script src="jquery-3.7.1.min.js"></script>
     <script>
-        function makeRequest()
-        {
-            
-        }
+       
+            $(document).ready(function(){
+
+                alert(" Document is Ready ");
+            $("#uid").blur(function(){
+
+                var url="http://localhost:9000/ErrMsg?uid="+$("#uid").val();
+                alert(url);
+                $.get(url,function(data,status){
+                    if(status=="success")
+                    {
+                        $("#msg").html(data);
+                    }
+                });
+            });
+            });
+        
     </script>
 </head>
 <body>
     <form action="">
         Enter User ID:
-        <input type="text" name="uid" id="uid" onblur="makeRequest()"/>
+        <input type="text" name="uid" id="uid"/>
         <br/> <br/> 
         <span id="msg"></span>
         Enter Password:
