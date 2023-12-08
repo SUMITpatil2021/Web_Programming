@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- <script src="jquery-3.7.1.min.js"></script> -->
+   <script>
+        function displaywelcome()
+        {
+            ajax=createAjaxObject();
+            if(ajax)
+            {
+                alert("Ajax Object get Created !!!");
+            }
+         var url="http://localhost:9000/welcomeMsg?uid="+document.getElementById("uid").value;
+         alert(url);
+         ajax.onreadystatechange=updatePage;
+         ajax.open("GET",url,true);
+         ajax.send("");
+        }
+
+        function createAjaxObject()
+        {
+            try
+            {
+                var ajax=new XMLHttpRequest();
+                return ajax;
+            }
+            catch(e)
+            {
+                try
+                {
+                    var ajax=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                catch(e)
+                {
+                    alert("Ajax not supported ");
+                }
+            }
+        }
+         
+        function updatePage()
+        {
+            alert(ajax.readyState);
+            if(ajax.readyState==4)
+            {
+                document.getElementById("msg").innerHTML=ajax.responseText;
+            }
+        }
+   </script>
+</head>
+<body>
+    <form action="">
+        Enter user name : 
+        <input type="text" name="uid" id="uid"/> <br/>
+        <input type="button" value="ClickeMe" onclick="displaywelcome()"/> 
+    </form>
+    <div id="msg"> </div>
+</body>
+</html>
