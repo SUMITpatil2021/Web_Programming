@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>
-        var str='{"empid": 21, " name" :"Sumit", "salary" :50000 , "deptno": 4 , "isManager" : true },{"empid": 21, " name" :"Sumit", "salary" :50000 , "deptno": 4 , "isManager" : true }';
+        function showdetails() {
+
+            var str = '{"empid": 21, " name" :"Sumit", "salary" :50000 , "deptno": 4 , "isManager" : true },{"empid": 21, " name" :"Sumit", "salary" :50000 , "deptno": 4 , "isManager" : true }'; 
+            var emp=JSON.parse(str);
+            
+            document.getElementById("msg").innerHTML=str;
+        }
     </script>
 </head>
+
 <body>
-    
+    <form action="">
+        <input type="button" value="Show Details " onclick="showdetails()">
+
+    </form>
+    <div id="msg"></div>
 </body>
+
 </html>

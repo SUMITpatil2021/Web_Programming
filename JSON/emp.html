@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script src="jquery-3.7.1.min.js"></script> 
+   <script>
+    $('document').ready(function(){
+        alert("Doc is Ready !!!");
+        $("#b1").click(function(){
+            
+            var url="http://localhost:9000/getDetails";
+            alert(url);
+            var dno=$("#uid").val();
+            $.post(url,{deptno:dno},function(data,status){
+                if(status=="success")
+                {
+                    var emps=JSON.parse(data);
+                    str="<table border=1 >";
+                        
+                        str+="<tr>";
+                                str+="<th> Empno  </th>";
+                                str+="<th> Ename  </th>";
+                                str+="<th> Job  </th>";
+                                str+="<th> Salaray  </th>";
+                            str+="</tr>"
+                        for(i=0;i<emps.length;i++)
+                        {
+
+                            str+="<tr>";
+                                str+="<td>"+emps[i].empno+"</td>";
+                                str+="<td>"+emps[i].ename+"</td>";
+                                str+="<td>"+emps[i].job+"</td>";
+                                str+="<td>"+emps[i].sal+"</td>";
+                            str+="</tr>"
+                        }
+                    str+="</table>";
+                    $("#emps").html(str);
+                }
+            })
+            
+        })
+
+    })
+
+   </script>
+</head>
+<body>
+    <form action="" method="post">
+        Enter Dept No  :
+        <input type="number" name="uid" id="uid"> <br/>
+        <input type="button" value="Get Details" id="b1">
+
+    </form> 
+    <div id="emps"></div>
+</body>
+</html>

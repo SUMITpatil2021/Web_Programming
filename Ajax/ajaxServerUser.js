@@ -36,7 +36,7 @@ con.query(query,function(err,result){
   
     if(!err)
     {   
-        if(user==query)
+        if(user==result[0].ename)
         res.send("<h3> user name Already taken </h3>");
     
         else
