@@ -38,7 +38,11 @@ app.post('/getDetails',function(req,res){
     con.query(query,function(err,result){
         if(!err)
         {
+            // console.log(JSON.stringify(result));
+            
+          
             res.send(JSON.stringify(result));
+            
         }
         else
         {

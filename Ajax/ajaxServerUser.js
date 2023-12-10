@@ -30,17 +30,28 @@ app.get('/user',function(req,res){
 });
 
 app.get('/ErrMsg',function(req,res){
-var user=req.query.uid;
-var query="select ename from emp where ename="+user;
+ user=req.query.uid;
+var query="select ename from emp where ename='"+user+"'";
 con.query(query,function(err,result){
+    console.log(query);
   
     if(!err)
     {   
+        // var name=result.ename;
+        // console.log(name);
         if(user==result[0].ename)
-        res.send("<h3> user name Already taken </h3>");
-    
+        {
+            
+            res.send("<h3> user name Already taken </h3>");
+        }
         else
-        res.send("<h3>Username available </h3>")
+        {
+             res.send("<h3>Username available </h3>");
+        }
+    }
+    else
+    {
+        console.log("Incorrect Query ");
     }
    
 })

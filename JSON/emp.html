@@ -12,8 +12,10 @@
             var dno=$("#uid").val();
             $.post(url,{deptno:dno},function(data,status){
                 if(status=="success")
-                {
+                { 
+                
                     var emps=JSON.parse(data);
+                    
                     str="<table border=1 >";
                         
                         str+="<tr>";
@@ -33,7 +35,9 @@
                             str+="</tr>"
                         }
                     str+="</table>";
-                    $("#emps").html(str);
+                    $("#emps").html(str); 
+                    // alert(str);
+                   
                 }
             })
             
