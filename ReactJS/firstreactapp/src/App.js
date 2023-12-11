@@ -1,14 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import ClassComp from './components/ClassComp';
+import FunComp from './components/FunComp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-        </p>
+        </p> 
+        <h1> Hello Sumit </h1>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -16,9 +19,14 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
-      </header>
-    </div>
+        </a>   
+        
+      </header>  */}
+      <ClassComp/>
+      <FunComp />
+    </div>  
+   
+    
   );
 }
 
