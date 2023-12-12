@@ -5,7 +5,7 @@ function FunComp(){
 
         <h1 >Hello From React </h1>
         <hr/> <hr /> 
-        <img src={pic} height={h} width={w}></>
+        {/* <img src={pic} height={h} width={w}></> */}
             
         </div>
 
