@@ -10,6 +10,9 @@ import ChangePara from './components/ChangePara';
 import IncDec from './components/IncDec';
 import SimpleStyle from './components/SimpleStyle';
 import ArrayStudent from './components/ArrayStudent';
+import Login from './components/login';
+import RegForm from './components/RegForm';
+import Timer from './components/Timer';
 
 
 function App() {
@@ -38,9 +41,12 @@ function App() {
       <Employee empid="21" ename="Sumit" salary="50000" />  
       <WelcomeState /> 
       <ChangePara /> 
-      <IncDec /> */}
+      <IncDec /> 
       <SimpleStyle /> 
-      <ArrayStudent names={["sumit","kunal","shubham","supriya"]}/>
+      <ArrayStudent />  
+      <Login /> 
+      <RegForm /> */}
+      <Timer />
 
 
     </div>  
