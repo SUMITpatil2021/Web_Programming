@@ -13,6 +13,12 @@ import ArrayStudent from './components/ArrayStudent';
 import Login from './components/login';
 import RegForm from './components/RegForm';
 import Timer from './components/Timer';
+import { Route, Router,Link, Routes } from 'react-router-dom';
+import LocalStorage from './components/LocalStorage';
+import LocalDisplay from './components/LocalDisplay';
+import REST_API_POSTMAN from './components/REST_API_POSTMAN';
+import EmpData from './components/EmpData';
+
 
 
 function App() {
@@ -45,8 +51,44 @@ function App() {
       <SimpleStyle /> 
       <ArrayStudent />  
       <Login /> 
-      <RegForm /> */}
-      <Timer />
+      <RegForm /> 
+      <Timer /> */} 
+      <Link to="/">HOME</Link>  
+      <ul  className="nav navbar">
+          <li className='nav-item'>
+              <Link to="/Login" className='nav-link'>Login </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/RegForm" className='nav-link'>Registration</Link>
+          </li> 
+          <li className='nav-item'>
+            <Link to="/Employee" className='nav-link'>Employee Data</Link>
+          </li> 
+          <li className='nav-item' >
+            <Link to="/LocalStorage" className='nav-link'>Local Storage</Link>
+          </li> 
+          <li className='nav-item'>
+            <Link to="/LocalDisplay" className='nav-link'>Local Display </Link>
+          </li>   
+
+          <li className='nav-item'>
+            <Link to="/REST_API_POSTMAN" className='nav-link'>REST_API_POSTMAN</Link>
+          </li> 
+          <li  className='nav-item'>
+            <Link to="/EmpData" className='nav-link' >Get Employee Data</Link>
+          </li>
+      </ul>
+
+      <Routes>
+        <Route path='/'  />
+        <Route path='/Login' element={<Login/>} /> 
+        <Route path='/RegForm' element={<RegForm/>} />
+        <Route path='/Employee' element={<Employee />} /> 
+        <Route path='/LocalStorage' element={<LocalStorage />} />
+        <Route path='/LocalDisplay' element={<LocalDisplay />} />
+        <Route path='/REST_API_POSTMAN' element={<REST_API_POSTMAN />} />
+       <Route path='/EmpData' element={<EmpData />} />
+      </Routes>
 
 
     </div>  
