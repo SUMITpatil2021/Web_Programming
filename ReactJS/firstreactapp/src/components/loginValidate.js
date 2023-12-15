@@ -45,7 +45,7 @@ const validateData=(key,val)=>{
 }
 
 const handleChange=(key,value)=>{
-    
+
 }
 export default function LoginValidate(){
    const[msg,changeMsg]=useState("");
