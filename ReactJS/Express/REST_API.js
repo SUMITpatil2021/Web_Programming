@@ -37,7 +37,7 @@ app.listen(9000,function(){
 
 
 
-app.get('/emps',function(){
+app.get('/emps',function(req,res){
     console.log("Req received");
     var query="select * from emp " ;
     con.query(query,function(err,result){

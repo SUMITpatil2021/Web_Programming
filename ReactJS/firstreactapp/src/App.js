@@ -18,6 +18,10 @@ import LocalStorage from './components/LocalStorage';
 import LocalDisplay from './components/LocalDisplay';
 import REST_API_POSTMAN from './components/REST_API_POSTMAN';
 import EmpData from './components/EmpData';
+import EmpInsert from './components/EmpInsert';
+
+
+
 
 
 
@@ -77,6 +81,10 @@ function App() {
           <li  className='nav-item'>
             <Link to="/EmpData" className='nav-link' >Get Employee Data</Link>
           </li>
+
+          <li  className='nav-link'>
+            <Link to="/EmpInsert" className='nav-link'>Insert Employee</Link>
+          </li>
       </ul>
 
       <Routes>
@@ -87,7 +95,9 @@ function App() {
         <Route path='/LocalStorage' element={<LocalStorage />} />
         <Route path='/LocalDisplay' element={<LocalDisplay />} />
         <Route path='/REST_API_POSTMAN' element={<REST_API_POSTMAN />} />
-       <Route path='/EmpData' element={<EmpData />} />
+        <Route path='/EmpData' element={<EmpData />} /> 
+        <Route path='/EmpInsert' element={<EmpInsert />} />
+      
       </Routes>
 
 

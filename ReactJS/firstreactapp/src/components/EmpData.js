@@ -25,10 +25,10 @@ export default function EmpData(){
                     emps.map((v)=>{
                         return(
                             <tr>
-                                <td>{v.EMPID}</td>
-                                <td>{v.ename}</td>
-                                <td>{v.job}</td>
-                                <td>{v.sal}</td>
+                                <td>{v.EMPNO}</td>  
+                                <td>{v.ENAME}</td>
+                                <td>{v.JOB}</td>
+                                <td>{v.SAL}</td>
                             </tr>
                         )
                     })
